@@ -1,4 +1,7 @@
 #!/bin/bash
+# site: www.361way.com   
+# mail: itybku@139.com
+
 ftp_host="10.211.137.250"
 ftp_user="root"
 ftp_password="123456"

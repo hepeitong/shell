@@ -1,4 +1,7 @@
 #!/bin/bash
+# site: www.361way.com   
+# mail: itybku@139.com
+
 backdel_logs()
 {
         cd /opt/huawei/I2000/var/logs
