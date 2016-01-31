@@ -5,7 +5,7 @@
 
 
 inet_byte() {
-    for i in `ls /sys/class/net/`; do
+    for i in `ls /sys/class/net/|grep -v bond`; do
         let "$i"_rx"$1"=`cat /sys/class/net/$i/statistics/rx_bytes`
         let "$i"_tx"$1"=`cat /sys/class/net/$i/statistics/tx_bytes`
         #eval echo '$'"$i"_rx"$1"
@@ -35,7 +35,7 @@ while true; do
     inet_byte 1
     sleep 1
     inet_byte 2
-    for i in `ls /sys/class/net/`; do
+    for i in `ls /sys/class/net/|grep -v bond`; do
         eva $i
         #echo $i $a1 $a2 $b1 $b2 $tol1 $tol2
         #echo  "$i $a $b $c"
