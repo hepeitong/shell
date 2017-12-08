@@ -1,4 +1,6 @@
 #!/bin/bash
+# site: www.361way.com
+# mail: itybku@139.com
 
 check_process(){
 tolprocess=`ps auxf|grep DisplayMa[nager]|wc -l`

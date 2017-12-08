@@ -16,7 +16,8 @@ Download() {
     else
         mkdir $amos_folder
     fi
-ftp -niv $ftp_host>>${downloadlog}<<EOF 
+#ftp -niv $ftp_host>>${downloadlog}<<EOF 
+ftp -n $ftp_host>>${downloadlog}<<EOF 
     user $ftp_user $ftp_password
     lcd $amos_folder
     cd $remote_folder
