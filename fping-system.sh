@@ -63,7 +63,7 @@ while true; do
 
 
 	touch $BLACKHOSTS
-	mysql -h 10.211.137.173 -u zabbix -p'Zabbix^123' zabbix  -e 'select ip from interface where hostid not in (select hostid from hosts where status=1)' > $DBHOSTS
+	mysql -h 10.211.137.173 -u zabbix -p'zabbixpassword' zabbix  -e 'select ip from interface where hostid not in (select hostid from hosts where status=1)' > $DBHOSTS
 	grep -v ip $DBHOSTS |sort |uniq > $SORTHOSTS
 	>$SMSHOSTS
 	Pingchecks
